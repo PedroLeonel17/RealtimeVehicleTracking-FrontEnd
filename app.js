@@ -1,6 +1,5 @@
 const teste = document.getElementById('teste');
 const veiculos = document.getElementById('veiculos');
-const PORT = 3333;
 const API_URL = `https://realtimevehicletracking-w5rz.onrender.com/`;
 const teste_res = document.getElementById('teste_res');
 const marcaInput = document.getElementById('marca');
