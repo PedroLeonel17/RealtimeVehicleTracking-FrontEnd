@@ -11,7 +11,7 @@ teste.addEventListener('click', () => {
     fetch(API_URL)
         .then(response => response.json())
         .then(data => {
-            teste_res.innerHTML = 'Dados recebidos do servidor: <br>' + data;
+            teste_res.innerHTML = 'Dados recebidos do servidor: <br>' + JSON.stringify(data);
         })
         .catch(error => {
             teste_res.textContent = ' Erro ao buscar dados: ' + error.message;
