@@ -2,7 +2,7 @@ const teste = document.getElementById('teste');
 const veiculos = document.getElementById('veiculos');
 const API_URL = `https://realtimevehicletracking-w5rz.onrender.com/`;
 const teste_res = document.getElementById('teste_res');
-const marcaInput = document.getElementById('marca');
+const plateInput = document.getElementById('placa');
 const veiculos_res = document.getElementById('veiculos_res');
 const modelInput = document.getElementById('modelo');
 const vehicleYearInput = document.getElementById('ano');
@@ -23,8 +23,8 @@ teste.addEventListener('click', () => {
 veiculos.addEventListener('click', () => {
     veiculos_res.textContent = 'Enviando requisição para o servidor... LINK DO SERVIDOR: ' + API_URL + 'veiculos';
 
-    if (!marcaInput.value) {
-        veiculos_res.textContent = ' Por favor, insira a marca do veículo.';
+    if (!plateInput.value) {
+        veiculos_res.textContent = ' Por favor, insira a placa do veículo.';
         return;
     }else{
         fetch(API_URL + 'veiculos', {
@@ -33,7 +33,7 @@ veiculos.addEventListener('click', () => {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            plate: marcaInput.value,
+            plate: plateInput.value,
             model: modelInput.value,
             vehicle_year: vehicleYearInput.value
         })
