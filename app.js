@@ -4,6 +4,8 @@ const API_URL = `https://realtimevehicletracking-w5rz.onrender.com/`;
 const teste_res = document.getElementById('teste_res');
 const marcaInput = document.getElementById('marca');
 const veiculos_res = document.getElementById('veiculos_res');
+const modelInput = document.getElementById('modelo');
+const vehicleYearInput = document.getElementById('ano');
 
 teste.addEventListener('click', () => {
     teste_res.textContent = 'Enviando requisição para o servidor... LINK DO SERVIDOR: ' + API_URL;
