@@ -31,7 +31,9 @@ veiculos.addEventListener('click', () => {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            marca: marcaInput.value
+            plate: marcaInput.value,
+            model: modelInput.value,
+            vehicle_year: vehicleYearInput.value
         })
         })
         .then(response => response.json())
